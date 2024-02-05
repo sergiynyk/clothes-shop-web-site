@@ -1,0 +1,18 @@
+body{
+    background: #cacaca;
+}
+.off-set-text{
+    text-indent: 50px;
+}
+
+.bottom-text {
+    position: fixed;
+    text-indent: 25px;
+    bottom: 0;
+}
+
+.font-changer {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 25px;
+    font-weight: 500;
+}
