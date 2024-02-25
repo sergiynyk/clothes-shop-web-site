@@ -1,85 +1,162 @@
 {% extends 'base_template.html' %} {% block content %}
 <div class="container py-5">
   <div
-    class="accordion accordion-flush product-img"
-    id="accordionFlushExample"
+    class="container py-5 product-img"
+    style="background-image: url('/static/img/background.jpg')"
   >
-    <div class="accordion-item">
-      <h2 class="accordion-header">
-        <button
-          class="accordion-button collapsed"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#flush-collapseOne"
-          aria-expanded="false"
-          aria-controls="flush-collapseOne"
+    <div
+      class="accordion accordion-flush product-img"
+      id="accordionFlushExample"
+    >
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button
+            class="accordion-button collapsed"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#flush-collapseOne"
+            aria-expanded="false"
+            aria-controls="flush-collapseOne"
+          >
+            Які у вас умови доставки?
+          </button>
+        </h2>
+        <div
+          id="flush-collapseOne"
+          class="accordion-collapse collapse"
+          data-bs-parent="#accordionFlushExample"
         >
-          Accordion Item #1
-        </button>
-      </h2>
-      <div
-        id="flush-collapseOne"
-        class="accordion-collapse collapse"
-        data-bs-parent="#accordionFlushExample"
-      >
-        <div class="accordion-body">
-          Placeholder content for this accordion, which is intended to
-          demonstrate the <code>.accordion-flush</code> class. This is the first
-          item's accordion body.
+          <div class="accordion-body">
+            Ми пропонуємо безкоштовну стандартну доставку для замовлень на суму
+            вище 1000 грн. Час доставки становить зазвичай 3-5 робочих днів.
+            Також є можливість експрес-доставки за додаткову плату, яка
+            забезпечує отримання замовлення протягом 1-2 робочих днів.
+          </div>
         </div>
       </div>
-    </div>
-    <div class="accordion-item">
-      <h2 class="accordion-header">
-        <button
-          class="accordion-button collapsed"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#flush-collapseTwo"
-          aria-expanded="false"
-          aria-controls="flush-collapseTwo"
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button
+            class="accordion-button collapsed"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#flush-collapseTwo"
+            aria-expanded="false"
+            aria-controls="flush-collapseTwo"
+          >
+            Чи можу я вибрати місце та час доставки?
+          </button>
+        </h2>
+        <div
+          id="flush-collapseTwo"
+          class="accordion-collapse collapse"
+          data-bs-parent="#accordionFlushExample"
         >
-          Accordion Item #2
-        </button>
-      </h2>
-      <div
-        id="flush-collapseTwo"
-        class="accordion-collapse collapse"
-        data-bs-parent="#accordionFlushExample"
-      >
-        <div class="accordion-body">
-          Placeholder content for this accordion, which is intended to
-          demonstrate the <code>.accordion-flush</code> class. This is the
-          second item's accordion body. Let's imagine this being filled with
-          some actual content.
+          <div class="accordion-body">
+            На жаль, наразі ми не надаємо можливість вибору точного часу
+            доставки. Однак ви можете вказати певні побажання щодо доставки у
+            полі коментарів під час замовлення, і ми спробуємо врахувати їх.
+          </div>
         </div>
       </div>
-    </div>
-    <div class="accordion-item">
-      <h2 class="accordion-header">
-        <button
-          class="accordion-button collapsed"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#flush-collapseThree"
-          aria-expanded="false"
-          aria-controls="flush-collapseThree"
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button
+            class="accordion-button collapsed"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#flush-collapseThree"
+            aria-expanded="false"
+            aria-controls="flush-collapseThree"
+          >
+            Чи здійснюєте ви міжнародну доставку?
+          </button>
+        </h2>
+        <div
+          id="flush-collapseThree"
+          class="accordion-collapse collapse"
+          data-bs-parent="#accordionFlushExample"
         >
-          Accordion Item #3
-        </button>
-      </h2>
-      <div
-        id="flush-collapseThree"
-        class="accordion-collapse collapse"
-        data-bs-parent="#accordionFlushExample"
-      >
-        <div class="accordion-body">
-          Placeholder content for this accordion, which is intended to
-          demonstrate the <code>.accordion-flush</code> class. This is the third
-          item's accordion body. Nothing more exciting happening here in terms
-          of content, but just filling up the space to make it look, at least at
-          first glance, a bit more representative of how this would look in a
-          real-world application.
+          <div class="accordion-body">
+            Так, ми здійснюємо міжнародну доставку в більшість країн світу.
+            Вартість та терміни доставки можуть варіюватися залежно від країни
+            призначення. Більш детальну інформацію можна отримати в процесі
+            оформлення замовлення або звернувшись до нашої служби підтримки.
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button
+            class="accordion-button collapsed"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#flush-collapseFour"
+            aria-expanded="false"
+            aria-controls="flush-collapseFour"
+          >
+            Чи є можливість отримати безкоштовну доставку?
+          </button>
+        </h2>
+        <div
+          id="flush-collapseFour"
+          class="accordion-collapse collapse"
+          data-bs-parent="#accordionFlushExample"
+        >
+          <div class="accordion-body">
+            Так, ми надаємо безкоштовну доставку для всіх замовлень на суму вище
+            1000 грн. Це стосується як стандартної, так і експрес-доставки.
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button
+            class="accordion-button collapsed"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#flush-collapseFive"
+            aria-expanded="false"
+            aria-controls="flush-collapseFive"
+          >
+            Чи можна відстежити моє замовлення під час доставки?
+          </button>
+        </h2>
+        <div
+          id="flush-collapseFive"
+          class="accordion-collapse collapse"
+          data-bs-parent="#accordionFlushExample"
+        >
+          <div class="accordion-body">
+            Так, ми надсилаємо вам посилання для відстеження замовлення після
+            його відправлення. Ви зможете відстежувати місцезнаходження вашого
+            замовлення на протязі всього шляху до вас.
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button
+            class="accordion-button collapsed"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#flush-collapseSix"
+            aria-expanded="false"
+            aria-controls="flush-collapseSix"
+          >
+            Чи є можливість отримати товар сьогодні?
+          </button>
+        </h2>
+        <div
+          id="flush-collapseSix"
+          class="accordion-collapse collapse"
+          data-bs-parent="#accordionFlushExample"
+        >
+          <div class="accordion-body">
+            На жаль, у нас немає послуги доставки в цей самий день. Найшвидший
+            термін доставки - експрес-доставка, яка забезпечує отримання
+            замовлення протягом 1-2 робочих днів.
+          </div>
         </div>
       </div>
     </div>
