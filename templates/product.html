@@ -1,0 +1,53 @@
+{% extends 'base_template.html' %} {% block title %}
+<title>Пост</title>
+{% endblock title %} {% block content %}
+<!-- Вміст сторінки -->
+<div class="container py-5">
+  <div
+    class="container py-5 product-img"
+    style="background-image: url('/static/img/background.jpg')"
+  >
+    <div class="row">
+      <div class="col-12 col-md-4">
+        <img
+          src="{{ url_for('static', filename='img/'+product[3]) }}"
+          class="img-fluid product-img"
+          alt="..."
+        />
+      </div>
+      <div
+        class="col-12 col-md-8 product-img"
+        style="background-color: #ebebeb75"
+      >
+        <div class="container py-2">
+          <div class="container small-outline">
+            <h2 class="my-4 text-center">{{product[1]}}</h2>
+          </div>
+        </div>
+        <div class="container py-1">
+          <div class="container small-outline">
+            <h3>{{product[6]}} ₴</h3>
+          </div>
+        </div>
+        <div class="container py-1">
+          <div
+            class="container small-outline py-1"
+          >
+            <h5 class="my-3">{{product[2] | safe}}</h5>
+          </div>
+        </div>
+        <div class="container py-2">
+          <div class="container">
+            <a href="{{ url_for('order', product_id = product[0]) }}">
+              <button type="button" class="btn btn-primary small-outline">
+                Замовити
+              </button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock content %}
