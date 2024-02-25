@@ -6,11 +6,11 @@
   />
   <div class="card-body">
     <h5 class="card-title">{{product[1]}}</h5>
-    <h3 class="card-text">{{product[7]}}</h3>
+    <h6 class="card-text">{{categories[product[5]-1][1]}}</h6>
     <p class="card-text">{{product[6]}} ₴</p>
     <a
       href="{{ url_for('product', product_id = product[0]) }}"
-      class="btn btn-primary"
+      class="btn btn-warning"
       >Купити</a
     >
   </div>
