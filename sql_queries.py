@@ -14,9 +14,30 @@ class ShopDB:
         self.cursor.close()
         self.connection.close()
 
-    def get_all_posts(self):
+    def get_all_products(self):
         self.open()
         self.cursor.execute("SELECT * FROM products")
         data = self.cursor.fetchall()
+        self.close()
+        return data
+    
+    def get_products_by_category(self, category_id):
+        self.open()
+        self.cursor.execute('''SELECT * FROM products WHERE "category_id"=?''', [category_id])
+        data = self.cursor.fetchall()
+        self.close()
+        return data
+    
+    def get_all_categories(self):
+        self.open()
+        self.cursor.execute("SELECT * FROM categories")
+        data = self.cursor.fetchall()
+        self.close()
+        return data
+    
+    def get_product(self, product_id):
+        self.open()
+        self.cursor.execute('''SELECT * FROM products WHERE "id"=?''', [product_id])
+        data = self.cursor.fetchone()
         self.close()
         return data
