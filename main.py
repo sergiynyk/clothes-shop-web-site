@@ -16,6 +16,12 @@ def support():
     categories = db.get_all_categories()
     return render_template("support.html", title = "Support", categories = categories)
 
+@app.route("/about_us")
+def about_us():
+    categories = db.get_all_categories()
+    return render_template("about_us.html", title = "About Us", categories = categories)
+
+
 @app.route("/catalog")
 def all_catalog():
     categories = db.get_all_categories()
