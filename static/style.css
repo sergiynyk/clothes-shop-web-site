@@ -1,18 +1,46 @@
-body{
-    background: #cacaca;
+body {
+  background: #cacaca;
 }
-.off-set-text{
-    text-indent: 50px;
+.off-set-text {
+  text-indent: 50px;
 }
 
 .bottom-text {
-    position: fixed;
-    text-indent: 25px;
-    bottom: 0;
+  text-indent: 25px;
+  bottom: 0;
 }
 
 .font-changer {
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 25px;
-    font-weight: 500;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 25px;
+  font-weight: 500;
+}
+
+footer {
+  background-color: #ebebeb;
+}
+
+.product-img {
+  border: 10px solid #ebebeb;
+  border-radius: 10px;
+}
+
+.small-outline {
+  border: 3px solid #ebebeb;
+  border-radius: 10px;
+}
+
+.support-outline {
+  border: 15px solid #a8a8a8;
+  border-radius: 15px;
+}
+
+.img-center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.shop-post-card-max-height {
+  max-height: 100rem
 }
