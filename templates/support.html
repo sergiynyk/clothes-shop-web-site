@@ -162,7 +162,7 @@
     </div>
   </div>
 </div>
-<div class="container">
+<div class="container py-5">
   <div
     class="container product-img py-5"
     style="background-image: url('/static/img/background.jpg')"
@@ -170,25 +170,49 @@
     <div class="container product-img py-2" style="background-color: #ebebeb50">
       <div class="mb-3">
         <label for="exampleFormControlInput1" class="form-label"
-          >Електронна адреса</label
+          >Ваше Ім'я (Обов'язково)</label
+        >
+        <input
+          type="name"
+          class="form-control"
+          id="exampleFormControlInput1"
+          placeholder="Приклад: Антон"
+          required
+        />
+      </div>
+      <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label"
+          >Електронна адреса (Обов'язково)</label
         >
         <input
           type="email"
           class="form-control"
           id="exampleFormControlInput1"
-          placeholder="name@example.com"
+          placeholder="Імяпошти@Приклад.com"
           required
         />
       </div>
       <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label"
+          >Телефон (Необов'язково)</label
+        >
+        <input
+          type="phone-number"
+          class="form-control"
+          id="exampleFormControlInput1"
+          placeholder="Приклад: +380521622816"
+        />
+      </div>
+      <div class="mb-3">
         <label for="exampleFormControlTextarea1" class="form-label"
-          >Повідомлення</label
+          >Опишіть свою проблему чи повідомлення, нажміть кнопку надіслати після
+          заповнення.</label
         >
         <textarea
           class="form-control"
           id="exampleFormControlTextarea1"
           rows="3"
-          placeholder="Залишіть тут свій відгук чи повідомлення"
+          placeholder="Приклад: Добрий день, у мене не пройшла оплата!"
         ></textarea>
       </div>
       <button type="button" class="btn btn-info">Надіслати</button>

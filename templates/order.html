@@ -1,3 +1,18 @@
 {% extends 'order-base-template.html' %} {% block content %}
-
+<div class="container py-5">
+  <div
+    class="container product-img py-5"
+    style="background-image: url('/static/img/background.jpg')"
+  >
+    <div class="container row-cols-1">
+      <p>abrtka</p>
+    </div>
+    <div class="container">
+      <p>abrtka</p>
+    </div>
+    <div class="container">
+      {% include 'order_post_card.html' %}
+    </div>
+  </div>
+</div>
 {% endblock content %}

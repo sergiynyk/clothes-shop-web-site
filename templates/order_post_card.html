@@ -1,0 +1,12 @@
+<div class="card small-outline" style="max-width: 18rem">
+    <img
+      src="{{ url_for('static', filename='img/'+product[3]) }}"
+      class="card-img-top"
+      alt="..."
+    />
+    <div class="card-body">
+      <h5 class="card-title">{{product[1]}}</h5>
+      <h6 class="card-text">{{categories[product[5]-1][1]}}</h6>
+      <p class="card-text">{{product[6]}} ₴</p>
+    </div>
+  </div>
