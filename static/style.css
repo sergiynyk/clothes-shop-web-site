@@ -10,9 +10,14 @@ body {
   bottom: 0;
 }
 
+.left-text {
+  text-indent: 10px;
+  left: 0;
+}
+
 .font-changer {
   font-family: "Courier New", Courier, monospace;
-  font-size: 25px;
+  font-size: 20px;
   font-weight: 500;
 }
 
@@ -42,5 +47,5 @@ footer {
 }
 
 .shop-post-card-max-height {
-  max-height: 100rem
+  max-height: 100rem;
 }
