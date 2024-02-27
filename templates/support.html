@@ -168,55 +168,65 @@
     style="background-image: url('/static/img/background.jpg')"
   >
     <div class="container product-img py-2" style="background-color: #ebebeb50">
-      <div class="mb-3">
-        <label for="exampleFormControlInput1" class="form-label"
-          >Ваше Ім'я (Обов'язково)</label
-        >
-        <input
-          type="name"
-          class="form-control"
-          id="exampleFormControlInput1"
-          placeholder="Приклад: Антон"
-          required
-        />
-      </div>
-      <div class="mb-3">
-        <label for="exampleFormControlInput1" class="form-label"
-          >Електронна адреса (Обов'язково)</label
-        >
-        <input
-          type="email"
-          class="form-control"
-          id="exampleFormControlInput1"
-          placeholder="Імяпошти@Приклад.com"
-          required
-        />
-      </div>
-      <div class="mb-3">
-        <label for="exampleFormControlInput1" class="form-label"
-          >Телефон (Необов'язково)</label
-        >
-        <input
-          type="phone-number"
-          class="form-control"
-          id="exampleFormControlInput1"
-          placeholder="Приклад: +380521622816"
-        />
-      </div>
-      <div class="mb-3">
-        <label for="exampleFormControlTextarea1" class="form-label"
-          >Опишіть свою проблему чи повідомлення, нажміть кнопку надіслати після
-          заповнення.</label
-        >
-        <textarea
-          class="form-control"
-          id="exampleFormControlTextarea1"
-          rows="3"
-          placeholder="Приклад: Добрий день, у мене не пройшла оплата!"
-        ></textarea>
-      </div>
-      <button type="button" class="btn btn-info">Надіслати</button>
+      <form action="" method="post">
+        <div class="mb-3">
+          <label for="exampleFormControlInput1" class="form-label"
+            >Ваше Ім'я (Обов'язково)</label
+          >
+          <input
+            name="name"
+            type="text"
+            class="form-control"
+            id="exampleFormControlInput1"
+            placeholder="Приклад: Антон"
+            required
+          />
+        </div>
+        <div class="mb-3">
+          <label for="exampleFormControlInput1" class="form-label"
+            >Електронна адреса (Обов'язково)</label
+          >
+          <input
+            name="email"
+            type="email"
+            class="form-control"
+            id="exampleFormControlInput1"
+            placeholder="Імяпошти@Приклад.com"
+            required
+          />
+        </div>
+        <div class="mb-3">
+          <label for="exampleFormControlInput1" class="form-label"
+            >Телефон (Обов'язково)</label
+          >
+          <input
+            required
+            name="phone"
+            type="tel"
+            class="form-control"
+            id="exampleFormControlInput1"
+            placeholder="Приклад: +380521622816"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="exampleFormControlTextarea1" class="form-label"
+            >Опишіть свою проблему чи повідомлення, нажміть кнопку надіслати
+            після заповнення.</label
+          >
+          <textarea
+            name="problem"
+            class="form-control"
+            id="exampleFormControlTextarea1"
+            rows="3"
+            placeholder="Приклад: Добрий день, у мене не пройшла оплата!"
+          ></textarea>
+        </div>
+        <button type="submit" class="btn btn-info">Надіслати</button>
+      </form>
     </div>
+    {% for type, message in get_flashed_messages(True) %}
+    <div class="alert {{type}} my-3 ">{{message}}</div>
+    {% endfor %}
   </div>
 </div>
 {% endblock content %}

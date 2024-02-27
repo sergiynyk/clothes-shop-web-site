@@ -48,4 +48,14 @@
     <span class="visually-hidden">Next</span>
   </button>
 </div>
+<div
+  class="container py-5 row-cols-1 product-img"
+  style="background-image: url('/static/img/background.jpg')"
+>
+  <div class="container py-5">
+    {% for product in products%} {% if product[0] == 6 %}
+    <div class="col">{% include 'shop_post_card.html' %}</div>
+    {% endif %} {% endfor %}
+  </div>
+</div>
 {% endblock content %}

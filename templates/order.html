@@ -4,14 +4,198 @@
     class="container product-img py-5"
     style="background-image: url('/static/img/background.jpg')"
   >
-    <div class="container row-cols-1">
-      <p>abrtka</p>
-    </div>
     <div class="container">
-      <p>abrtka</p>
-    </div>
-    <div class="container">
-      {% include 'order_post_card.html' %}
+      <div class="row">
+        <div class="col-12 col-md-8 py-2">
+          <form action="" method="post">
+          <div
+            class="container small-outline my-2 "
+            style="background-color: #ebebeb50"
+          >
+            <h2>Оформлення замовлення</h2>
+          </div>
+          <div
+            class="container small-outline my-2 "
+            style="background-color: #ebebeb50"
+          >
+            <h5>Введіть ваше ім'я</h5>
+            <div class="mb-3">
+              <input
+                name="name"
+                type="text"
+                class="form-control"
+                id="exampleFormControlInput1"
+                placeholder="Ім'я"
+                required
+              />
+            </div>
+          </div>
+          <div
+            class="container small-outline my-2 "
+            style="background-color: #ebebeb50"
+          >
+            <h5>Введіть ваш номер телефону</h5>
+            <div class="mb-3">
+              <input
+                name="phone"
+                type="tel"
+                class="form-control"
+                id="exampleFormControlInput1"
+                placeholder="+38/0000000000"
+                required
+              />
+            </div>
+          </div>
+          <div
+            class="container small-outline my-2 "
+            style="background-color: #ebebeb50"
+          >
+            <h5>Введіть вашу електронну пошту</h5>
+            <div class="mb-3">
+              <input
+                name="email"
+                type="email"
+                class="form-control"
+                id="exampleFormControlInput1"
+                placeholder="name@email.com"
+                required
+              />
+            </div>
+          </div>
+          <div
+            class="container small-outline my-2 "
+            style="background-color: #ebebeb50"
+          >
+            <h5>Введіть ваше місто</h5>
+            <div class="mb-3">
+              <input
+                name="city"
+                type="text"
+                class="form-control"
+                id="exampleFormControlInput1"
+                placeholder="м.Львів"
+                required
+              />
+            </div>
+          </div>
+          <div
+            class="container small-outline py-2 my-2 "
+            style="background-color: #ebebeb50"
+          >
+            <h5>Сервіс доставки</h5>
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="flexRadioDefault1"
+                id="flexRadioDefault1"
+              />
+              <label class="form-check-label" for="flexRadioDefault1">
+                Укрпошта
+              </label>
+            </div>
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="flexRadioDefault1"
+                id="flexRadioDefault2"
+                checked
+              />
+              <label class="form-check-label" for="flexRadioDefault2">
+                Нова Пошта
+              </label>
+            </div>
+          </div>
+          <div
+            class="container small-outline py-2 my-2 "
+            style="background-color: #ebebeb50"
+          >
+            <h5>Доставка чи самовивіз</h5>
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="flexRadioDefault2"
+                id="flexRadioDefault3"
+              />
+              <label class="form-check-label" for="flexRadioDefault3">
+                Самовивіз
+              </label>
+            </div>
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="flexRadioDefault2"
+                id="flexRadioDefault4"
+                checked
+              />
+              <label class="form-check-label" for="flexRadioDefault4">
+                Доставка
+              </label>
+            </div>
+          </div>
+          <div
+            class="container small-outline my-2 "
+            style="background-color: #ebebeb50"
+          >
+            <h5>Введіть вашу адресу</h5>
+            <div class="mb-3">
+              <input
+                name="address"
+                type="text"
+                class="form-control"
+                id="exampleFormControlInput1"
+                placeholder="Вулиця Непридуманої назви 37"
+                required
+              />
+            </div>
+          </div>
+          <div
+            class="container small-outline my-2 "
+            style="background-color: #ebebeb50"
+          >
+            <h5>Кількість одиниць товару</h5>
+            <div class="mb-3">
+              <input
+                name="name"
+                type="number"
+                min="1"
+                max="100"
+                class="form-control"
+                id="exampleFormControlInput1"
+                placeholder="1"
+                value="1"
+                required
+              />
+            </div>
+          </div>
+          <div
+            class="mb-3 small-outline p-3"
+            style="background-color: #ebebeb50"
+          >
+            <label for="exampleFormControlTextarea1" class="form-label"
+              >Комментар до замовлення</label
+            >
+            <textarea
+              name="comment"
+              class="form-control"
+              id="exampleFormControlTextarea1"
+              rows="3"
+              placeholder=""
+            ></textarea>
+          </div>
+          <button type="submit" class="btn btn-success">
+            Оформити замовлення
+          </button>
+          </form>
+        </div>
+        <div class="col-12 col-md-4">{% include 'order_post_card.html' %}</div>
+        {% for type, message in get_flashed_messages(True) %}
+        <div class="alert {{type}} my-3 ">{{message}}</div>
+        {% endfor %}
+      </div>
     </div>
   </div>
 </div>
