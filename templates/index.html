@@ -4,29 +4,71 @@
     class="carousel-inner py-5 product-img"
     style="background-image: url('/static/img/background.jpg')"
   >
-    <div class="carousel-item active">
+    <div
+      class="container small-outline py-2 my-2 text-center"
+      style="background-color: #ebebeb50"
+    >
+      <h2>Весняний розпродаж</h2>
+    </div>
+    <div class="carousel-item active text-center">
       <img
         src="static/img/pants10-Glamorous_night_pants.jpeg"
         class="d-block w-100 img-fluid product-img img-center"
         style="max-width: 60rem; height: auto"
         alt="..."
       />
+      <h2
+        class="container small-outline py-2 my-2"
+        style="background-color: #ebebeb50"
+      >
+        Штани "Glamorous Night"
+      </h2>
+      <h3
+        class="container small-outline py-2 my-2"
+        style="background-color: #ebebeb50"
+      >
+        Штани / Шорти
+      </h3>
     </div>
-    <div class="carousel-item">
+    <div class="carousel-item text-center">
       <img
         src="static/img/shirt11-Urban_traveller.jpeg"
         class="d-block w-100 img-fluid product-img img-center"
         style="max-width: 60rem; height: auto"
         alt="..."
       />
+      <h2
+        class="container small-outline py-2 my-2"
+        style="background-color: #ebebeb50"
+      >
+        Міський мандрівник
+      </h2>
+      <h3
+        class="container small-outline py-2 my-2"
+        style="background-color: #ebebeb50"
+      >
+        Футболки / Майки
+      </h3>
     </div>
-    <div class="carousel-item">
+    <div class="carousel-item text-center">
       <img
         src="static/img/sweater6-mountain_wind.jpeg"
         class="d-block w-100 img-fluid product-img img-center"
         style="max-width: 60rem; height: auto"
         alt="..."
       />
+      <h2
+        class="container small-outline py-2 my-2"
+        style="background-color: #ebebeb50"
+      >
+        Гірський вітер
+      </h2>
+      <h3
+        class="container small-outline py-2 my-2"
+        style="background-color: #ebebeb50"
+      >
+        Кофти / Светри
+      </h3>
     </div>
   </div>
   <button
@@ -47,15 +89,5 @@
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Next</span>
   </button>
-</div>
-<div
-  class="container py-5 row-cols-1 product-img"
-  style="background-image: url('/static/img/background.jpg')"
->
-  <div class="container py-5">
-    {% for product in products%} {% if product[0] == 6 %}
-    <div class="col">{% include 'shop_post_card.html' %}</div>
-    {% endif %} {% endfor %}
-  </div>
 </div>
 {% endblock content %}
