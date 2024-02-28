@@ -50,6 +50,6 @@ class ShopDB:
 
     def create_order(self, product_id, name, phone, email, address, post_service, city, delivery, quantity, comment, cost, status = 0):
         self.open()
-        self.cursor.execute('''INSERT INTO orders(product_id, name, phone, email, address, post_service, city, delivery, quantity, comment, cost, status) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)''', [product_id, name, phone, email, address, post_service, city, delivery, quantity, comment, cost, str(status)])
+        self.cursor.execute('''INSERT INTO orders(product_id, name, phone, email, address, post_sevice, city, delivery, quantity, comment, cost, status) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)''', [product_id, name, phone, email, address, post_service, city, delivery, quantity, comment, cost, str(status)])
         self.connection.commit()
         self.close()
